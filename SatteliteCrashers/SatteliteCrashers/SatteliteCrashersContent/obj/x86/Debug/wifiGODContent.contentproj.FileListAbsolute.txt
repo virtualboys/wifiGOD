@@ -1,0 +1,2 @@
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashersContent\obj\x86\Debug\wifiGODContent.contentprojResolveAssemblyReference.cache
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashersContent\obj\x86\Debug\wifiGODContent.contentprojResolveAssemblyReference.cache

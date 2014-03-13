@@ -1,0 +1,5 @@
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashersContent\obj\x86\Debug\SatteliteCrashersContent.contentprojResolveAssemblyReference.cache
+E:\Dropbox\Brickman Art\SatteliteCrashers\SatteliteCrashers\SatteliteCrashersContent\obj\x86\Debug\SatteliteCrashersContent.contentprojResolveAssemblyReference.cache
+C:\Users\David\Dropbox\Brickman Art\SatteliteCrashers\SatteliteCrashers\SatteliteCrashersContent\obj\x86\Debug\SatteliteCrashersContent.contentprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashersContent\obj\x86\Debug\SatteliteCrashersContent.contentprojResolveAssemblyReference.cache
+C:\Users\manny\Dropbox\Brickman Art\SatteliteCrashers\SatteliteCrashers\SatteliteCrashersContent\obj\x86\Debug\SatteliteCrashersContent.contentprojResolveAssemblyReference.cache

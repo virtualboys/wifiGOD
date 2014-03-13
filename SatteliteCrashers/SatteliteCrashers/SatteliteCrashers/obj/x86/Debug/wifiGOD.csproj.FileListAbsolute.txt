@@ -1,0 +1,156 @@
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\3dRender.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\Ship.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\ramp1.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\pool.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\myramp.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\desert.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\dude.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\shredgod.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\ShipTexture.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\hoverboard2.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\shredgod8.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\shredgod10.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\ShipTexture_0.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\hoverboard2_0.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\DESERTLVL.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\bowl.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\shredgod7.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\shredgod7_0.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\embryo.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\cloud1.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\cloud2.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\shredgodpose.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\flylike.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\skate.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\sun.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\startscreen.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\exit.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\start.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\cloud.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\cloud3.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\star.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\sun1.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\sun2.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\font.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\stars1.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\stars2.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\stars3.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\wind.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\phone.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\enterpass1.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\enterpass2.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\enterpass3.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\enterpass4.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy1.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy10.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy2.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy3.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy4.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy5.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy6.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy7.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy8.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy9.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\input0.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\input1.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\input2.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\input3.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\input4.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\stars.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\exitglow.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\startglow.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\no.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\yes.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\satellite.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\found.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\searching.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\sucess.xnb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\flylike.wma
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\wifiGOD.exe.manifest
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\wifiGOD.application
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\wifiGOD.exe
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\wifiGOD.pdb
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\obj\x86\Debug\wifiGOD.exe.manifest
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\obj\x86\Debug\wifiGOD.application
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\obj\x86\Debug\wifiGOD.exe
+C:\Users\manny\documents\visual studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\obj\x86\Debug\wifiGOD.pdb
+C:\Users\manny\Documents\Visual Studio 2010\Projects\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\obj\x86\Debug\wifiGOD.csprojResolveAssemblyReference.cache
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\obj\x86\Debug\wifiGOD.exe
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\obj\x86\Debug\wifiGOD.pdb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\3dRender.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\Ship.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\ramp1.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\pool.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\myramp.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\desert.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\dude.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\shredgod.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\DESERTLVL.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\bowl.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\cloud1.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\cloud2.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\shredgodpose.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\cloud.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\cloud3.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\satellite.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\ShipTexture.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\hoverboard2.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\shredgod8.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\shredgod10.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\shredgod7.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\embryo.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\sun.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\startscreen.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\exit.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\start.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\star.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\sun1.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\sun2.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\stars1.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\stars2.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\stars3.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\phone.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\enterpass1.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\enterpass2.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\enterpass3.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\enterpass4.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy1.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy10.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy2.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy3.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy4.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy5.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy6.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy7.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy8.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\gameboy9.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\input0.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\input1.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\input2.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\input3.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\input4.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\stars.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\exitglow.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\startglow.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\flylike.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\skate.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\wind.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\no.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\yes.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\found.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\searching.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\sucess.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\font.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\ShipTexture_0.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\hoverboard2_0.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\shredgod7_0.xnb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\Content\flylike.wma
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\wifiGOD.exe.manifest
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\wifiGOD.application
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\wifiGOD.exe
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\bin\x86\Debug\wifiGOD.pdb
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\obj\x86\Debug\wifiGOD.csprojResolveAssemblyReference.cache
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\obj\x86\Debug\wifiGOD.exe.manifest
+C:\Users\manny\Desktop\SatteliteCrashers\SatteliteCrashers\SatteliteCrashers\obj\x86\Debug\wifiGOD.application
