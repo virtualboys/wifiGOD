@@ -6,43 +6,50 @@ public class player : MonoBehaviour {
 	public static player instance;
 
 	public Rigidbody body;
-	public Quaternion rotation = Quaternion.identity;
+	public Quaternion yRot = Quaternion.identity;
 
 
 	void Start () {
 
 		body = GetComponent ("Rigidbody") as Rigidbody;
 		body.freezeRotation = true;
-		body.useGravity = false;
+		//body.useGravity = false;
+		
+		yRot = Quaternion.identity;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		float axis = Input.GetAxis ("Horizontal");
-		var rot = transform.rotation.eulerAngles;
-		float desRot = -80 * axis;
-		float rotAmt = dif (desRot,rot.z)/10;
+		//smooth
+		//rotation *= Quaternion.AngleAxis(rotAmt, new Vector3(0,0,1));
+		//transform.rotation = rotation;
+		//var rot = rotation.eulerAngles;
+		//float desRot = -80 * axis;
+		//float rotAmt = dif (desRot,rot.z)/10;
+		//discrete
+		//transform.rotation = Quaternion.AngleAxis(axis * 80,new Vector3(0,0,1));
+		//transform.rotation *= Quaternion.AngleAxis(vert*80, new Vector3(0,1,0));
 		
-		transform.rotation = Quaternion.identity;
 		
+		float horizAxis = -Input.GetAxis ("Horizontal");
 		
-		float vert = Input.GetAxis ("Vertical");
-		float vertRotAmt = dif (desRot,rot.z)/10;
+		var desZRot = Quaternion.AngleAxis(horizAxis * 70, Vector3.forward);
 		
-		rotation = Quaternion.Euler (new Vector3 (0, 0, vert * 80));
+		float v = .05f * body.velocity.magnitude;
+		v = Mathf.Clamp(v,0,4);
 		
-		//if (Input.GetAxis ("Jump") == 1) {
-			Vector3 f =  Quaternion.AngleAxis(transform.eulerAngles.z,new Vector3(0,1,0)) * transform.forward;
-			f.Normalize ();
-			transform.rotation =   Quaternion.Euler(new Vector3(0,-rotAmt*10,0)) * rotation;
-			//transform.rotation *= Quaternion.AngleAxis(-rotAmt,new Vector3(0,1,0));
-			//body.AddForce (10 * transform.forward);
-			Debug.Log (f);
-		//}
+		var deltaYRot = Quaternion.AngleAxis(-v * horizAxis, Vector3.up);
+		yRot *= deltaYRot;
 		
+		transform.rotation = Quaternion.Slerp(transform.rotation, yRot * desZRot, 5*Time.deltaTime);
 		//transform.rotation *= rotation;
 		
-			
+		if (Input.GetAxis ("Jump") == 1)
+			body.AddForce(10 * transform.forward);
+		
+		body.velocity = deltaYRot * body.velocity;
+		
+		
 	}
 
 	float dif(float rot1, float rot2){

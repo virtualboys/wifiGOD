@@ -13,7 +13,7 @@ public class cameraController : MonoBehaviour {
 
 	// Update is called once per frame
 	public void Update() {
-		cam.transform.position = player.transform.position - player.transform.TransformDirection (new Vector3(0,-4,8));
+		cam.transform.position = player.transform.position -  8*player.transform.forward + (new Vector3(0,4,0));
 		cam.transform.LookAt (player.transform.position);
 	}
 }
