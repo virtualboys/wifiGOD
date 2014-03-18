@@ -41,6 +41,8 @@ public class player : MonoBehaviour {
 		var deltaYRot = Quaternion.AngleAxis(-v * horizAxis, Vector3.up);
 		yRot *= deltaYRot;
 		
+		//ok?
+		
 		transform.rotation = Quaternion.Slerp(transform.rotation, yRot * desZRot, 5*Time.deltaTime);
 		//transform.rotation *= rotation;
 		
