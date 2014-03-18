@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{51410DB2-8570-737B-A495-110236DE2A7E}") = "New Unity Project", "Assembly-CSharp-vs.csproj", "{B2B58FB2-4462-6B0C-A872-40DD957E5FE0}"
+Project("{51410DB2-8570-737B-A495-110236DE2A7E}") = "New Unity Project", "Assembly-CSharp.csproj", "{B2B58FB2-4462-6B0C-A872-40DD957E5FE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -13,6 +13,7 @@ public class player : MonoBehaviour {
 
 		body = GetComponent ("Rigidbody") as Rigidbody;
 		body.freezeRotation = true;
+		body.useGravity = false;
 	}
 	
 	// Update is called once per frame
@@ -21,15 +22,21 @@ public class player : MonoBehaviour {
 		var rot = transform.rotation.eulerAngles;
 		float desRot = -80 * axis;
 		float rotAmt = dif (desRot,rot.z)/10;
-		rotation *= Quaternion.Euler (new Vector3 (0, 0, rotAmt));
+		
 		transform.rotation = Quaternion.identity;
+		
+		
+		float vert = Input.GetAxis ("Vertical");
+		float vertRotAmt = dif (desRot,rot.z)/10;
+		
+		rotation = Quaternion.Euler (new Vector3 (0, 0, vert * 80));
 		
 		//if (Input.GetAxis ("Jump") == 1) {
 			Vector3 f =  Quaternion.AngleAxis(transform.eulerAngles.z,new Vector3(0,1,0)) * transform.forward;
 			f.Normalize ();
-			transform.rotation = Quaternion.Euler(new Vector3(0,axis*180,0)) * rotation;
+			transform.rotation =   Quaternion.Euler(new Vector3(0,-rotAmt*10,0)) * rotation;
 			//transform.rotation *= Quaternion.AngleAxis(-rotAmt,new Vector3(0,1,0));
-			body.AddForce (10 * transform.forward);
+			//body.AddForce (10 * transform.forward);
 			Debug.Log (f);
 		//}
 		
