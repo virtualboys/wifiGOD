@@ -12,7 +12,7 @@ public class plateScript : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision collision){
 		player.instance.onPlate = true;
-		player.instance.transform.up = Vector3.up;
+		//player.instance.transform.up = Vector3.up;
 	}
 	
 	void OnCollisionExit(Collision collision){
