@@ -33,7 +33,8 @@ public class player : MonoBehaviour {
 		float turnAmt = .05f * body.velocity.magnitude;
 		turnAmt = Mathf.Clamp(turnAmt,1,4);
 
-		var deltaYRot = Quaternion.AngleAxis(-turnAmt * horizAxis, transform.up);
+		var deltaYRot = Quaternion.AngleAxis(-turnAmt * horizAxis, Quaternion.Inverse(transform.rotation)*Vector3.up);
+
 		yRot *= deltaYRot;
 
 		if(inPool){
@@ -43,12 +44,13 @@ public class player : MonoBehaviour {
 		//else
 			//desZRot = Quaternion.AngleAxis(horizAxis * 70, Vector3.forward);
 
-		float dLean = (vertAxis - leanAmt) ;
-		leanAmt += dLean;
+		float dLean = (vertAxis - leanAmt) /5;
+		//leanAmt += dLean;
 
 
 		transform.rotation *= deltaYRot;
 		var dZRot = Quaternion.AngleAxis(dLean * 70, Vector3.forward);
+		Debug.Log(dZRot);
 		transform.rotation *= dZRot;// * deltaYRot;// * dZRot;
 		//transform.rotation = yRot * desZRot;
 		//transform.rotation = Quaternion.Slerp(transform.rotation, yRot * desZRot, 5*Time.deltaTime);
