@@ -6,60 +6,70 @@ public class player : MonoBehaviour {
 	public static player instance;
 
 	public Rigidbody body;
-	public Quaternion yRot = Quaternion.identity;
+	public Quaternion yRot;
+
+	public bool inPool;
+
+	float leanAmt;
 
 
 	void Start () {
+		instance = this;
 
 		body = GetComponent ("Rigidbody") as Rigidbody;
 		body.freezeRotation = true;
-		//body.useGravity = false;
-		
+		body.useGravity = false;
 		yRot = Quaternion.identity;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//smooth
-		//rotation *= Quaternion.AngleAxis(rotAmt, new Vector3(0,0,1));
-		//transform.rotation = rotation;
-		//var rot = rotation.eulerAngles;
-		//float desRot = -80 * axis;
-		//float rotAmt = dif (desRot,rot.z)/10;
-		//discrete
-		//transform.rotation = Quaternion.AngleAxis(axis * 80,new Vector3(0,0,1));
-		//transform.rotation *= Quaternion.AngleAxis(vert*80, new Vector3(0,1,0));
-		
-		
+		//transform.up = Vector3.up;
+
 		float horizAxis = -Input.GetAxis ("Horizontal");
-		
-		var desZRot = Quaternion.AngleAxis(horizAxis * 70, Vector3.forward);
-		
-		float v = .05f * body.velocity.magnitude;
-		v = Mathf.Clamp(v,0,4);
-		
-		var deltaYRot = Quaternion.AngleAxis(-v * horizAxis, Vector3.up);
+		float vertAxis = Input.GetAxis("Vertical");
+		Quaternion desZRot = Quaternion.identity;
+
+		float turnAmt = .05f * body.velocity.magnitude;
+		turnAmt = Mathf.Clamp(turnAmt,1,4);
+
+		var deltaYRot = Quaternion.AngleAxis(-turnAmt * horizAxis, transform.up);
 		yRot *= deltaYRot;
+
+		if(inPool){
+			//var normal = (poolScript.instance.transform.position - transform.position).normalized;
+			//transform.up = Vector3.Lerp(transform.up, normal, 10*Time.deltaTime);
+		}
+		//else
+			//desZRot = Quaternion.AngleAxis(horizAxis * 70, Vector3.forward);
+
+		float dLean = (vertAxis - leanAmt) ;
+		leanAmt += dLean;
+
+
+		transform.rotation *= deltaYRot;
+		var dZRot = Quaternion.AngleAxis(dLean * 70, Vector3.forward);
+		transform.rotation *= dZRot;// * deltaYRot;// * dZRot;
+		//transform.rotation = yRot * desZRot;
+		//transform.rotation = Quaternion.Slerp(transform.rotation, yRot * desZRot, 5*Time.deltaTime);
 		
-		//ok?
+		//if (Input.GetAxis ("Jump") == 1)
+		//	body.AddForce(10 * transform.forward);
 		
-		transform.rotation = Quaternion.Slerp(transform.rotation, yRot * desZRot, 5*Time.deltaTime);
-		//transform.rotation *= rotation;
-		
-		if (Input.GetAxis ("Jump") == 1)
-			body.AddForce(10 * transform.forward);
-		
-		body.velocity = deltaYRot * body.velocity;
-		
+		//body.velocity = deltaYRot * body.velocity;
 		
 	}
+	
+	void updateRotBowl(){
+		transform.up = Vector3.up;
+	}
 
-	float dif(float rot1, float rot2){
-		float val = rot1 - rot2;
+	float subAngles(float angle1, float angle2){
+		float val = angle1 - angle2;
 		if (Mathf.Abs (val) > 180)
 			return - Mathf.Sign (val) * (360 - Mathf.Abs (val));
 
-		return (rot1 - rot2);
+		return (angle1 - angle2);
 	}
 
 }
