@@ -17,11 +17,10 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-<<<<<<< HEAD:branches/manny/wifiGOD/wifiGOD-csharp.sln
-												GlobalSection(MonoDevelopProperties) = preSolution
+														GlobalSection(MonoDevelopProperties) = preSolution
 =======
-													GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> manny:wifiGOD/wifiGOD-csharp.sln
+												GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> manny:wifiGOD/wifiGOD.sln
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

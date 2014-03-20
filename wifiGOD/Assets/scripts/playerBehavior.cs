@@ -86,17 +86,17 @@ public class playerBehavior : MonoBehaviour {
 		float vertInput = Input.GetAxis("Vertical");
 		float mouseInput = 10 * Input.GetAxis("Mouse X");
 
-		lookAngle += mouseInput;
+		//lookAngle += mouseInput;
 
 		//Vector2 angInput =  new Vector2(Mathf.Cos(Mathf.Deg2Rad*lookAngle)* horizInput, Mathf.Sin(Mathf.Deg2Rad*lookAngle)*vertInput);
 		angVel = Vector2.Lerp(angVel, new Vector2(horizInput, vertInput), Time.deltaTime * 5);
 
 		var zRot = Quaternion.AngleAxis(-50 * angVel.x, Vector3.forward);
 		var xRot = Quaternion.AngleAxis(50 * angVel.y, Quaternion.Inverse(transform.rotation) * Vector3.right);
-		var yRot = Quaternion.AngleAxis(mouseInput, Vector3.up);
+		//var yRot = Quaternion.AngleAxis(mouseInput, Vector3.up);
 
 		transform.rotation *= Quaternion.Slerp(Quaternion.identity, xRot * zRot, Time.deltaTime * 5);
-		transform.rotation *= yRot;
+		//transform.rotation *= yRot;
 
 		if(Input.GetAxis("Jump") == 1){
 			hover ();
