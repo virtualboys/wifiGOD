@@ -16,5 +16,6 @@ public class poolScript : MonoBehaviour {
 
 	void OnCollisionExit(Collision collision){
 		playerBehavior.instance.inPool = false;
+
 	}
 }

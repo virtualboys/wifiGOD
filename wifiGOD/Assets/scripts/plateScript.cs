@@ -11,9 +11,10 @@ public class plateScript : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter(Collision collision){
+
 		playerBehavior.instance.onPlate = true;
 
-		if(playerBehavior.instance.body.velocity.y < 0)
+		//if(playerBehavior.instance.body.velocity.y < 0)
 			playerBehavior.instance.resetRot();
 	}
 	

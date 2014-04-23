@@ -49,9 +49,11 @@
      <Compile Include="Assets\clouds\cloudBehavior.cs" />
      <Compile Include="Assets\clouds\cloudSpawner.cs" />
      <Compile Include="Assets\scripts\cameraController.cs" />
+     <Compile Include="Assets\scripts\dontGoThroughThings.cs" />
      <Compile Include="Assets\scripts\plateScript.cs" />
      <Compile Include="Assets\scripts\playerBehavior.cs" />
      <Compile Include="Assets\scripts\poolScript.cs" />
+     <None Include="Assets\shaders\flatShader.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
