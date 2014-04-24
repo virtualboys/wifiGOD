@@ -13,8 +13,6 @@ public class playerBehavior : MonoBehaviour {
 	public bool onPlate;
 	public bool inAir { get { return !inPool && !onPlate; } }
 
-	public float lookAngle;
-
 	public bool useG;
 
 	float leanAmt;
@@ -23,6 +21,8 @@ public class playerBehavior : MonoBehaviour {
 
 	float startHoverVel;
 	float slowVel;
+
+	Vector2 mousePos;
 
 	void Awake () {
 
@@ -93,41 +93,38 @@ public class playerBehavior : MonoBehaviour {
 
 	void updateAir(){
 
-		float horizInput = Input.GetAxis("Horizontal");
-		float vertInput = Input.GetAxis("Vertical");
-		//float mouseInput = 10 * Input.GetAxis("Mouse X");
+		//float horizInput = Input.GetAxis("Horizontal");
+		//float vertInput = Input.GetAxis("Vertical");
 
-		//lookAngle += mouseInput;
 
-		//Vector2 angInput =  new Vector2(Mathf.Cos(Mathf.Deg2Rad*lookAngle)* horizInput, Mathf.Sin(Mathf.Deg2Rad*lookAngle)*vertInput);
+		float horizInput = Input.GetAxis("Mouse X");
+		float vertInput = Input.GetAxis("Mouse Y");
 
 		angVel = Vector2.Lerp(angVel, new Vector2(horizInput, vertInput), Time.deltaTime * 5);
 
-
-
-		if(Input.GetAxis("Jump") == 1){
-			//body.useGravity = false;
-
-			//start hover reset tilt
-			if(Input.GetKeyDown("space")){
+		if(Input.GetMouseButton(0)){
+			//start hover reset tilt on new press
+			if(Input.GetMouseButtonDown(0)){
 				StartCoroutine(sLerpToVecCoroutine(Vector3.up));
 				startHoverVel = body.velocity.y;
 			}
 
+			mousePos += new Vector2(horizInput, vertInput);
+
 			hover ();
 		}
 		else{
-
 			//end hover reset tilt
-			if(Input.GetKeyUp("space"))
+			if(Input.GetMouseButtonUp(0)){
 				StartCoroutine(sLerpToVecCoroutine(Vector3.up));
+				mousePos = Vector2.zero;
+			}
 
-			//body.useGravity = true;
-			//StopCoroutine("hoverSlow");
 			startHoverVel = 0;
 
 			fall();
 
+			//slow horiz vel
 			var horizV = new Vector2(body.velocity.x, body.velocity.z);
 			horizV = Vector2.Lerp(horizV, Vector2.zero, Time.deltaTime);
 			body.velocity = new Vector3(horizV.x, body.velocity.y, horizV.y);
@@ -135,38 +132,35 @@ public class playerBehavior : MonoBehaviour {
 	}
 
 	void fall(){
+		var xRot = Quaternion.AngleAxis(50 *.2f * angVel.y, Vector3.right);
+		var yRot = Quaternion.AngleAxis(50 *.2f * angVel.x, Quaternion.Inverse(transform.rotation) * Vector3.up);
 
-		var yRot = Quaternion.AngleAxis(50 * angVel.x, Quaternion.Inverse(transform.rotation) * Vector3.up);
-		var xRot = Quaternion.AngleAxis(50 * angVel.y, Vector3.right);
-		
-		transform.rotation *= Quaternion.Slerp(Quaternion.identity, yRot * xRot, Time.deltaTime * 5);
+		transform.rotation *=  yRot;
 	}
 
 	void hover(){
-
+		/*
 		var zRot = Quaternion.AngleAxis(-50 * angVel.x, Vector3.forward);
 		var xRot = Quaternion.AngleAxis(50 * angVel.y, Quaternion.Inverse(transform.rotation) 
 			* cameraController.instance.camera.transform.right);
-		
-		transform.rotation *= Quaternion.Slerp(Quaternion.identity, zRot * xRot, Time.deltaTime * 5);
+		*/
+		//transform.rotation *= Quaternion.Slerp(Quaternion.identity, zRot * xRot, Time.deltaTime * 5);
 
-
+		//slow y vel
 		float newYV = Mathf.SmoothDamp(body.velocity.y, startHoverVel * .2f, ref slowVel, 1f);
 		body.velocity = new Vector3(body.velocity.x, newYV, body.velocity.z);
 
-		Vector3 euler = transform.rotation.eulerAngles;
-
-		float rad = Mathf.Deg2Rad * lookAngle;
-
-		float xVel = -30*Mathf.Cos(rad) * Mathf.Sin(Mathf.Deg2Rad*euler.z);
-		float zVel = 30*Mathf.Cos(rad) * Mathf.Sin(Mathf.Deg2Rad*euler.x);
-
-		Vector3 forward = -cameraController.instance.newHOffset;
+		Vector3 forward = cameraController.instance.transform.forward;
+		forward.y = 0;
+		forward.Normalize ();
 		Vector3 right = -Vector3.Cross(forward, Vector3.up);
 
-		float angVelMult = Mathf.Min(1, 1 / angVel.magnitude);
-		Vector3 strafeVel = angVelMult * (zVel * forward + xVel * right) + new Vector3(0,body.velocity.y,0);
+		Debug.Log (angVel);
+
+		//float angVelMult = Mathf.Min(1, 1 / angVel.magnitude);
+		Vector3 strafeVel =  (mousePos.y * forward + mousePos.x * right) + new Vector3(0,body.velocity.y,0);
 		body.velocity = Vector3.Lerp(body.velocity, strafeVel, Time.deltaTime);
+
 	}
 
 	public void launch(){

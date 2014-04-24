@@ -10,7 +10,7 @@ public class cameraController : MonoBehaviour {
 	public Camera camera;
 	public playerBehavior player;
 
-	Vector3 horizOffset;
+	public Vector3 horizOffset;
 	public Vector3 newHOffset;
 	int numCyclesTurning;
 
