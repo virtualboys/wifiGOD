@@ -7,7 +7,7 @@ public class cameraController : MonoBehaviour {
 
 	public Color clearColor;
 
-	public Camera camera;
+	public Camera cam;
 	public playerBehavior player;
 
 	public Vector3 horizOffset;
@@ -18,8 +18,8 @@ public class cameraController : MonoBehaviour {
 
 		instance = this;
 
-		camera = GetComponent ("Camera") as Camera;
-		camera.backgroundColor = clearColor;
+		cam = GetComponent ("Camera") as Camera;
+		cam.backgroundColor = clearColor;
 
 		horizOffset = player.transform.rotation * new Vector3(0,0,-1);
 	}
@@ -28,7 +28,7 @@ public class cameraController : MonoBehaviour {
 	void Update() {
 
 		if(player.inAir){
-			camera.transform.position = player.transform.position 
+			cam.transform.position = player.transform.position 
 				+ new Vector3(0, -.5f * player.body.velocity.y + 8, 0);
 
 			//falling
@@ -48,22 +48,22 @@ public class cameraController : MonoBehaviour {
 				horizOffset = Vector3.Slerp(horizOffset, newHOffset, Time.deltaTime * 5);
 				//}
 
-				camera.transform.position += 5 * horizOffset;
+				cam.transform.position += 5 * horizOffset;
 			}
 
 			else{
 				newHOffset = horizOffset/10;
 				horizOffset = Vector3.Slerp(horizOffset, newHOffset, Time.deltaTime * 5);
-				camera.transform.position += 5 * horizOffset;
+				cam.transform.position += 5 * horizOffset;
 			}
 
 
 		}
 		else{
-			camera.transform.position = player.transform.position 
+			cam.transform.position = player.transform.position 
 				- 8 * player.transform.forward + new Vector3(0, 4, 0);
 		}
 
-		camera.transform.LookAt (player.transform.position);
+		cam.transform.LookAt (player.transform.position);
 	}
 }

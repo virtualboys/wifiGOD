@@ -84,7 +84,7 @@ public class playerBehavior : MonoBehaviour {
 		}
 		else{
 			//body.velocity = transform.forward * body.velocity.magnitude;
-			body.velocity *= 1.01f;
+			body.velocity *= 1.0008f;
 
 			if(playerBehavior.instance.body.velocity.y > 0 && Input.GetKeyDown("space"))
 				playerBehavior.instance.launch();
