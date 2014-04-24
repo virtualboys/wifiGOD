@@ -23,8 +23,10 @@ public class playerBehavior : MonoBehaviour {
 	float slowVel;
 
 	Vector2 mousePos;
+	Vector2 lastMousePos;
 
 	void Awake () {
+		Screen.showCursor = false;
 
 		instance = this;
 
@@ -84,7 +86,7 @@ public class playerBehavior : MonoBehaviour {
 		}
 		else{
 			//body.velocity = transform.forward * body.velocity.magnitude;
-			body.velocity *= 1.01f;
+			body.velocity *= 1.005f;
 
 			if(playerBehavior.instance.body.velocity.y > 0 && Input.GetKeyDown("space"))
 				playerBehavior.instance.launch();
@@ -95,7 +97,6 @@ public class playerBehavior : MonoBehaviour {
 
 		//float horizInput = Input.GetAxis("Horizontal");
 		//float vertInput = Input.GetAxis("Vertical");
-
 
 		float horizInput = Input.GetAxis("Mouse X");
 		float vertInput = Input.GetAxis("Mouse Y");
@@ -109,7 +110,12 @@ public class playerBehavior : MonoBehaviour {
 				startHoverVel = body.velocity.y;
 			}
 
-			mousePos += new Vector2(horizInput, vertInput);
+			//update and clamp mouse pos
+			mousePos -= new Vector2(horizInput, vertInput);
+			if( Mathf.Abs(mousePos.x) > 30)
+				mousePos.x = Mathf.Sign(mousePos.x) * 30;
+			if(Mathf.Abs(mousePos.y) > 30)
+				mousePos.y = Mathf.Sign (mousePos.y) * 30;
 
 			hover ();
 		}
@@ -139,15 +145,19 @@ public class playerBehavior : MonoBehaviour {
 	}
 
 	void hover(){
-		/*
-		var zRot = Quaternion.AngleAxis(-50 * angVel.x, Vector3.forward);
-		var xRot = Quaternion.AngleAxis(50 * angVel.y, Quaternion.Inverse(transform.rotation) 
+
+		Vector2 dMousePos = mousePos - lastMousePos;
+		lastMousePos = mousePos;
+
+
+		var zRot = Quaternion.AngleAxis(-20 * dMousePos.x, Vector3.forward);
+		var xRot = Quaternion.AngleAxis(20 * dMousePos.y, Quaternion.Inverse(transform.rotation) 
 			* cameraController.instance.camera.transform.right);
-		*/
-		//transform.rotation *= Quaternion.Slerp(Quaternion.identity, zRot * xRot, Time.deltaTime * 5);
+
+		transform.rotation *= Quaternion.Slerp(Quaternion.identity, zRot * xRot, Time.deltaTime * 5);
 
 		//slow y vel
-		float newYV = Mathf.SmoothDamp(body.velocity.y, startHoverVel * .2f, ref slowVel, 1f);
+		float newYV = Mathf.SmoothDamp(body.velocity.y, startHoverVel * .2f, ref slowVel, 10f);
 		body.velocity = new Vector3(body.velocity.x, newYV, body.velocity.z);
 
 		Vector3 forward = cameraController.instance.transform.forward;
@@ -155,10 +165,10 @@ public class playerBehavior : MonoBehaviour {
 		forward.Normalize ();
 		Vector3 right = -Vector3.Cross(forward, Vector3.up);
 
-		Debug.Log (angVel);
 
 		//float angVelMult = Mathf.Min(1, 1 / angVel.magnitude);
-		Vector3 strafeVel =  (mousePos.y * forward + mousePos.x * right) + new Vector3(0,body.velocity.y,0);
+		Vector3 strafeVel =  (2 * mousePos.y * forward + 2 * mousePos.x * right) + new Vector3(0,body.velocity.y,0);
+
 		body.velocity = Vector3.Lerp(body.velocity, strafeVel, Time.deltaTime);
 
 	}
@@ -169,8 +179,6 @@ public class playerBehavior : MonoBehaviour {
 	}
 
 	public void resetRot(){
-		Debug.Log("resetrot");
-
 		transform.up = Vector3.up;
 		leanAmt = 0;
 	}
@@ -182,9 +190,6 @@ public class playerBehavior : MonoBehaviour {
 			var v = body.velocity;
 			v.y *= 1 - (numHoverSlowCycles - i) * .001f;
 
-			//body.velocity = v;
-
-			Debug.Log(i);
 
 			yield return null;
 		}
