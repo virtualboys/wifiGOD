@@ -84,7 +84,7 @@ public class playerBehavior : MonoBehaviour {
 
 		float horizInput = Input.GetAxis("Horizontal");
 		float vertInput = Input.GetAxis("Vertical");
-		float mouseInput = 10 * Input.GetAxis("Mouse X");
+		//float mouseInput = 10 * Input.GetAxis("Mouse X");
 
 		//lookAngle += mouseInput;
 
@@ -114,7 +114,7 @@ public class playerBehavior : MonoBehaviour {
 		v.y *= .95f;
 		body.velocity = v;
 
-		Vector3 euler = transform.rotation.eulerAngles;
+		//Vector3 euler = transform.rotation.eulerAngles;
 
 		float rad = Mathf.Deg2Rad * lookAngle;
 		body.velocity += new Vector3(Mathf.Cos(rad) * angVel.x, 0, Mathf.Sin(rad) * angVel.y);
