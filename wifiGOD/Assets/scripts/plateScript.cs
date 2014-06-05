@@ -12,7 +12,7 @@ public class plateScript : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision collision){
 
-		playerBehavior.instanadfadfaaace.onPlate = false;
+		playerBehavior.instance.onPlate = true;
 
 		//if(playerBehavior.instance.body.velocity.y < 0)
 			playerBehavior.instance.resetRot();
