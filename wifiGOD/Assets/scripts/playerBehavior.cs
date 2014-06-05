@@ -8,10 +8,11 @@ public class playerBehavior : MonoBehaviour {
 	public int numHoverSlowCycles = 50;
 
 	public Rigidbody body;
+	public Collider collider;
 
 	public bool inPool;
 	public bool onPlate;
-	public bool inAir { get { return !inPool && !onPlate; } }
+	public bool inAir { get {return !IsGrounded();} }
 
 	public bool useG;
 
@@ -25,24 +26,32 @@ public class playerBehavior : MonoBehaviour {
 	Vector2 mousePos;
 	Vector2 lastMousePos;
 
+	float distToGround;
+
 	void Awake () {
 		Screen.showCursor = false;
 
 		instance = this;
 
-		body = GetComponent ("Rigidbody") as Rigidbody;
-		body.freezeRotation = true;
+		//body = GetComponent ("Rigidbody") as Rigidbody;
+		//body.freezeRotation = true;
 		body.useGravity = useG;
+
+		distToGround = collider.bounds.extents.y;
+		Debug.Log(distToGround);
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		transform.position = body.position;
 
 		if(inAir)
 			updateAir();
 		else
 			updateGround();
 
+		//transform.rotation = body.transform.rotation;
 	}
 	
 	void updateGround(){
@@ -224,5 +233,27 @@ public class playerBehavior : MonoBehaviour {
 
 		return (angle1 - angle2);
 	}
+	/*
+	void OnCollisionEnter(Collision collision){
+		
+		inAir = false;
+		resetRot();
+	}
+	
+	void OnCollisionExit(Collision collision){
+		inAir = true;
+	}
+	*/
+	bool IsGrounded() {
+		RaycastHit hit;
+		bool r = Physics.Raycast(transform.position, -Vector3.up, out hit, distToGround + 0.1f);
+	
+		//Debug.Log(hit.rigidbody.gameObject);
+		return r;
+	}
 
 }
+
+
+
+
