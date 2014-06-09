@@ -22,7 +22,7 @@ public class playerBehavior : MonoBehaviour {
 	float startHoverVel;
 	float slowVel;
 
-	Vector2 mousePos;
+	Vector2 mouseDrag;
 	Vector2 lastMousePos;
 
 	void Awake () {
@@ -37,6 +37,7 @@ public class playerBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		mouseInput ();
 
 		if(inAir)
 			updateAir();
@@ -49,15 +50,20 @@ public class playerBehavior : MonoBehaviour {
 
 		var normal = Vector3.up;
 
+		/*
 		if(inPool){
 			normal = (poolScript.instance.transform.position - transform.position).normalized;
 			sLerpToVec(normal);
-		}
+		}*/
+		setRotGround ();
 
 		Quaternion dYRot = Quaternion.identity;
 		Quaternion dZRot = Quaternion.identity;
 
-		float horizAxis = -Input.GetAxis ("Horizontal");
+		//float horizAxis = -Input.GetAxis ("Horizontal");
+		float horizAxis = mouseDrag.x/20;
+
+		//how fast to turn based on speed
 		float turnAmt = .05f * body.velocity.magnitude;
 		turnAmt = Mathf.Clamp(turnAmt, 1, 4);
 
@@ -110,24 +116,10 @@ public class playerBehavior : MonoBehaviour {
 				startHoverVel = body.velocity.y;
 			}
 
-			//update and clamp mouse pos
-			mousePos -= new Vector2(horizInput, vertInput);
-			if( Mathf.Abs(mousePos.x) > 30)
-				mousePos.x = Mathf.Sign(mousePos.x) * 30;
-			if(Mathf.Abs(mousePos.y) > 30)
-				mousePos.y = Mathf.Sign (mousePos.y) * 30;
-
 			hover ();
 		}
 		else{
-			//end hover reset tilt
-			if(Input.GetMouseButtonUp(0)){
-				StartCoroutine(sLerpToVecCoroutine(Vector3.up));
-				mousePos = Vector2.zero;
-			}
-
 			startHoverVel = 0;
-
 			fall();
 
 			//slow horiz vel
@@ -146,9 +138,7 @@ public class playerBehavior : MonoBehaviour {
 
 	void hover(){
 
-		Vector2 dMousePos = mousePos - lastMousePos;
-		lastMousePos = mousePos;
-
+		Vector2 dMousePos = -(mouseDrag - lastMousePos);
 
 		var zRot = Quaternion.AngleAxis(-20 * dMousePos.x, Vector3.forward);
 		var xRot = Quaternion.AngleAxis(20 * dMousePos.y, Quaternion.Inverse(transform.rotation) 
@@ -167,10 +157,18 @@ public class playerBehavior : MonoBehaviour {
 
 
 		//float angVelMult = Mathf.Min(1, 1 / angVel.magnitude);
-		Vector3 strafeVel =  (2 * mousePos.y * forward + 2 * mousePos.x * right) + new Vector3(0,body.velocity.y,0);
+		Vector3 strafeVel =  -(2 * mouseDrag.y * forward + 2 * mouseDrag.x * right) + new Vector3(0,body.velocity.y,0);
 
 		body.velocity = Vector3.Lerp(body.velocity, strafeVel, Time.deltaTime);
 
+	}
+
+	public void setRotGround(){
+		RaycastHit hit = new RaycastHit();
+		Vector3 castPos = new Vector3 (transform.position.x, transform.position.y - .25f, transform.position.z);
+		if (Physics.Raycast (castPos, -transform.up, out hit)) {
+			sLerpToVec(hit.normal);
+		}
 	}
 
 	public void launch(){
@@ -178,9 +176,35 @@ public class playerBehavior : MonoBehaviour {
 		body.velocity = new Vector3(0, body.velocity.magnitude, 0);
 	}
 
+	public void land(){
+		resetRot ();
+
+	}
+
 	public void resetRot(){
 		transform.up = Vector3.up;
 		leanAmt = 0;
+	}
+
+	public void mouseInput(){
+		float horizInput = Input.GetAxis("Mouse X");
+		float vertInput = Input.GetAxis("Mouse Y");
+
+		if (Input.GetMouseButton (0)) {
+			lastMousePos = mouseDrag;
+			//update and clamp mouse pos
+			mouseDrag -= new Vector2(horizInput, vertInput);
+			if( Mathf.Abs(mouseDrag.x) > 30)
+				mouseDrag.x = Mathf.Sign(mouseDrag.x) * 30;
+			if( Mathf.Abs(mouseDrag.y) > 30)
+				mouseDrag.y = Mathf.Sign (mouseDrag.y) * 30;
+
+		} else if(Input.GetMouseButtonUp(0)){
+			//end hover reset tilt
+			StartCoroutine(sLerpToVecCoroutine(Vector3.up));
+			mouseDrag = Vector2.zero;
+
+		}
 	}
 
 	IEnumerator hoverSlow(){
