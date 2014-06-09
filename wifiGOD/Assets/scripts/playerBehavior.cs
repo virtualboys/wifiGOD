@@ -19,6 +19,8 @@ public class playerBehavior : MonoBehaviour {
 	public Vector2 angVel;
 	Vector2 airRot;
 
+	Quaternion worldRot;
+
 	float startHoverVel;
 	float slowVel;
 
@@ -33,6 +35,10 @@ public class playerBehavior : MonoBehaviour {
 		body = GetComponent ("Rigidbody") as Rigidbody;
 		body.freezeRotation = true;
 		body.useGravity = useG;
+	}
+
+	void Start () {
+		worldRot = transform.rotation;
 	}
 	
 	// Update is called once per frame
@@ -67,21 +73,24 @@ public class playerBehavior : MonoBehaviour {
 		float turnAmt = .05f * body.velocity.magnitude;
 		turnAmt = Mathf.Clamp(turnAmt, 1, 4);
 
-		if(!inPool){
-			float dLean = (horizAxis - leanAmt) / 5;
+		//if(!inPool){
+			float dLean = (horizAxis - leanAmt) ;
 			leanAmt += dLean;
 			
-			dZRot = Quaternion.AngleAxis(dLean * 70, Vector3.forward);
+			dZRot = Quaternion.AngleAxis(leanAmt * 70,  Vector3.forward);
 
 			dYRot = Quaternion.AngleAxis(-turnAmt * horizAxis, 
-     			Quaternion.Inverse(transform.rotation) * Vector3.up);
-		}
+     			(worldRot) * Vector3.up);
+
+		Debug.Log (leanAmt);
+		/*}
 		else{
 			dYRot = Quaternion.AngleAxis(-3 * turnAmt * horizAxis, Vector3.up);
-		}
+		}*/
 
-		var dRot = dYRot * dZRot;
-		transform.rotation *= Quaternion.Slerp(Quaternion.identity, dRot, Time.deltaTime * 50);
+		worldRot *= dYRot;//Quaternion.Slerp(Quaternion.identity, dYRot, Time.deltaTime * 50);
+		transform.rotation = worldRot * dZRot;
+		//transform.rotation *= dZRot;
 
 		//forward velocity
 		if (Input.GetAxis ("Jump") == 1)
@@ -183,6 +192,7 @@ public class playerBehavior : MonoBehaviour {
 
 	public void resetRot(){
 		transform.up = Vector3.up;
+		worldRot = transform.rotation;
 		leanAmt = 0;
 	}
 
@@ -234,11 +244,11 @@ public class playerBehavior : MonoBehaviour {
 
 	void sLerpToVec(Vector3 vec){
 
-		float angle = -Mathf.Rad2Deg * Mathf.Acos(Vector3.Dot(vec, transform.up));
-		Vector3 axis = Vector3.Cross(vec, transform.up);
+		float angle = -Mathf.Rad2Deg * Mathf.Acos(Vector3.Dot(vec, worldRot * Vector3.up));
+		Vector3 axis = Vector3.Cross(vec, worldRot * Vector3.up);
 
-		var quat = Quaternion.AngleAxis(angle, Quaternion.Inverse(transform.rotation) * axis);
-		transform.rotation *= Quaternion.Slerp(Quaternion.identity, quat, Time.deltaTime * 5);
+		var quat = Quaternion.AngleAxis(angle, Quaternion.Inverse(worldRot) * axis);
+		worldRot *= Quaternion.Slerp(Quaternion.identity, quat, Time.deltaTime * 5);
 	}
 
 	float subAngles(float angle1, float angle2){
