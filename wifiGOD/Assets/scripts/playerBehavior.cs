@@ -173,11 +173,8 @@ public class playerBehavior : MonoBehaviour {
 	}
 
 	public void setRotGround(){
-		RaycastHit hit = new RaycastHit();
-		Vector3 castPos = new Vector3 (transform.position.x, transform.position.y - .25f, transform.position.z);
-		if (Physics.Raycast (castPos, -transform.up, out hit)) {
-			sLerpToVec(hit.normal);
-		}
+		var normal = getSurfaceNormal ();
+		sLerpToVec(normal);
 	}
 
 	public void launch(){
@@ -185,15 +182,28 @@ public class playerBehavior : MonoBehaviour {
 		body.velocity = new Vector3(0, body.velocity.magnitude, 0);
 	}
 
+	/// <summary>
+	/// todo
+	/// </summary>
 	public void land(){
 		resetRot ();
 
 	}
 
 	public void resetRot(){
-		transform.up = Vector3.up;
+		transform.up = getSurfaceNormal();
 		worldRot = transform.rotation;
 		leanAmt = 0;
+	}
+
+	public Vector3 getSurfaceNormal(){
+		RaycastHit hit = new RaycastHit();
+		Vector3 castPos = new Vector3 (transform.position.x, transform.position.y - .25f, transform.position.z);
+		if (Physics.Raycast (castPos, -transform.up, out hit)) {
+			return hit.normal;
+		}
+
+		return Vector3.zero;
 	}
 
 	public void mouseInput(){
