@@ -53,44 +53,24 @@ public class playerBehavior : MonoBehaviour {
 	}
 	
 	void updateGround(){
-
-		var normal = Vector3.up;
-
-		/*
-		if(inPool){
-			normal = (poolScript.instance.transform.position - transform.position).normalized;
-			sLerpToVec(normal);
-		}*/
+		
 		setRotGround ();
 
 		Quaternion dYRot = Quaternion.identity;
 		Quaternion dZRot = Quaternion.identity;
 
-		//float horizAxis = -Input.GetAxis ("Horizontal");
 		float horizAxis = mouseDrag.x/20;
 
 		//how fast to turn based on speed
 		float turnAmt = .05f * body.velocity.magnitude;
 		turnAmt = Mathf.Clamp(turnAmt, 1, 4);
 
-		//if(!inPool){
-			float dLean = (horizAxis - leanAmt) ;
-			leanAmt += dLean;
-			
-			dZRot = Quaternion.AngleAxis(leanAmt * 70,  Vector3.forward);
+		dZRot = Quaternion.AngleAxis(horizAxis * 70,  Vector3.forward);
+		dYRot = Quaternion.AngleAxis(-turnAmt * horizAxis, 
+		(worldRot) * Vector3.up);
 
-			dYRot = Quaternion.AngleAxis(-turnAmt * horizAxis, 
-     			(worldRot) * Vector3.up);
-
-		Debug.Log (leanAmt);
-		/*}
-		else{
-			dYRot = Quaternion.AngleAxis(-3 * turnAmt * horizAxis, Vector3.up);
-		}*/
-
-		worldRot *= dYRot;//Quaternion.Slerp(Quaternion.identity, dYRot, Time.deltaTime * 50);
+		worldRot *= dYRot;
 		transform.rotation = worldRot * dZRot;
-		//transform.rotation *= dZRot;
 
 		//forward velocity
 		if (Input.GetAxis ("Jump") == 1)
@@ -109,9 +89,6 @@ public class playerBehavior : MonoBehaviour {
 	}
 
 	void updateAir(){
-
-		//float horizInput = Input.GetAxis("Horizontal");
-		//float vertInput = Input.GetAxis("Vertical");
 
 		float horizInput = Input.GetAxis("Mouse X");
 		float vertInput = Input.GetAxis("Mouse Y");
@@ -224,18 +201,6 @@ public class playerBehavior : MonoBehaviour {
 			StartCoroutine(sLerpToVecCoroutine(Vector3.up));
 			mouseDrag = Vector2.zero;
 
-		}
-	}
-
-	IEnumerator hoverSlow(){
-
-		for(int i = 0; i < numHoverSlowCycles; i++){
-			body.AddForce(-Physics.gravity*body.mass);
-			var v = body.velocity;
-			v.y *= 1 - (numHoverSlowCycles - i) * .001f;
-
-
-			yield return null;
 		}
 	}
 
